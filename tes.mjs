@@ -40,11 +40,11 @@ class FizzBuzz {
         return result;
     }
 
-    factroialRecursive(value) {
+    factorialRecursive(value) {
         if(value <= 0) {
             return 1;
         }else {
-            return value * factorialRecursive(value - 1);
+            return value * this.factorialRecursive(value - 1);
         }
     }
 }
@@ -53,3 +53,4 @@ const fizzBuzz = new FizzBuzz("Iko");
 fizzBuzz.buzzFizz();
 console.log(fizzBuzz.sayHello("Joko"));
 console.log(fizzBuzz.factorial(5));
+console.log(fizzBuzz.factorialRecursive(5));
