@@ -19,4 +19,13 @@ class FizzBuzz {
         }
         this.lastName = "Afianando";
     }
+
+    buzzFizz() {
+        return this.fizzBuzz(100);
+    }
+
+    sayHello(name) {
+        return `Hello ${name}, My Name is ${this.name} ${this.lastName}`;
+    }
+
 }
