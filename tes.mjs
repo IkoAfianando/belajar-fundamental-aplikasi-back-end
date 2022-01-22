@@ -34,9 +34,14 @@ class FizzBuzz {
         }
 
         let result = 1;
-        for(let i = 1; i <= result; i++) {
+        for(let i = 1; i <= value; i++) {
             result *= i;
         }
+        return result;
     }
 }
 
+const fizzBuzz = new FizzBuzz("Iko");
+fizzBuzz.buzzFizz();
+console.log(fizzBuzz.sayHello("Joko"));
+console.log(fizzBuzz.factorial(5));
