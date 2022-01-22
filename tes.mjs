@@ -17,5 +17,6 @@ class FizzBuzz {
                 }
             }
         }
+        this.lastName = "Afianando";
     }
 }
