@@ -1,8 +1,15 @@
-function randomCaptchaWord (length) {
-  var word = ''
-  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  for (var i = 0; i < length; i++) {
-    word += possible.charAt(Math.floor(Math.random() * possible.length))
+function permutation(str) {
+  if (str.length === 1) {
+    return [str];
   }
-  return word
+  const result = [];
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    const rest = str.slice(0, i) + str.slice(i + 1);
+    const perms = permutation(rest);
+    for (let j = 0; j < perms.length; j++) {
+      result.push(char + perms[j]);
+    }
+  }
+  return result;
 }
