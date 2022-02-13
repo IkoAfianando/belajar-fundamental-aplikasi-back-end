@@ -24,8 +24,21 @@
 // console.log(permutation("abc"));
 //
 
-function permuation(value) {
+function permutation(value) {
   if(value.length === 1) {
     return [value];
   }
+
+  let total = [];
+  for(let i = 0; i < value.length; i++) {
+    const str = value[i];
+    const rest = value.slice(0, i) + value.slice(i + 1);
+    const perms = permutation(rest);
+    for(let j = 0; j < perms; j++) {
+      total.push(str + perms[j])
+    }
+  }
+  return total;
 }
+
+
