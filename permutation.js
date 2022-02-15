@@ -34,11 +34,12 @@ function permutation(value) {
     const str = value[i];
     const rest = value.slice(0, i) + value.slice(i + 1);
     const perms = permutation(rest);
-    for(let j = 0; j < perms; j++) {
-      total.push(str + perms[j])
+    for(let j = 0; j < perms.length; j++) {
+      total.push(str + perms[j]);
     }
   }
   return total;
 }
 
+console.log(permutation("213"));
 
